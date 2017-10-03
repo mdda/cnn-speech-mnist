@@ -1,0 +1,29 @@
+#virtualenv -p python3 --system-site-packages ./env3-tensorflow
+#. env3-tensorflow/bin/activate
+# CLI-prompt changes
+
+#pip install --upgrade pip
+#pip install -r requirements.txt
+
+#jupyter notebook 
+
+# CPU version
+tensorflow>=1.3.0
+
+# If you're running locally, this needs CUDA toolkit 8.0 and CuDNN v6
+#tensorflow-gpu>=1.3.0
+
+# Jupyter (the new new thing)
+jupyter
+
+## This is a Pythonic interface to the HDF5 binary data format (used for keras-VGG16 weights reading)
+h5py>=2.5.0
+
+## Requests is only used in the GPU chooser, which is a pity.  OTOH, it's a good library
+requests>=2.9.0
+
+## For the speech module (MFCC, etc)
+python_speech_features
+
+## For the OGG/WAV (++?) reader
+soundfile
