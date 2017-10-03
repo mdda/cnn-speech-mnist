@@ -19,7 +19,7 @@ adversarially.
 
 ### Layout of Data
 
-```REPO/notebooks/2-CNN/8-Speech/```
+```REPO/```
 *  ```notebooks.ipynb```
 *  ```data/```
    *   ```num/``` (digits get sorted into separate subdirectories here)
