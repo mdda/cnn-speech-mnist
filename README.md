@@ -9,13 +9,6 @@ The steps for running this example are :
 
 The first two steps above are addressed in ```SpeechRecognition_Data.ipynb```, while the training part is in ```SpeechRecognition_Learn.ipynb```.
 
-So far, the ```SpeechSynthesis_Test.ipynb``` isn't in a useable state - 
-but the idea is to make something related to Tacotron, starting with simplifying the 
-output stage.  The current notebook explores whether sounds can be decently reconstructed
-from spectrograms.  Since that seems to work (but by a nasty iterative FFT method), the
-next step is to learn to do the transformation via a network, potentially trained
-adversarially.
-
 
 ### Layout of Data
 
@@ -57,9 +50,9 @@ pickled together into the datasets ```num.pkl``` and ```num-test.pkl``` (and sim
 These can be downloaded from the Red Cat Labs server.
 <!--
   971  cd notebooks/2-CNN/8-Speech/
-  973  tar -czf data-num-sounds.tar.gz data/num_* data/*raw-from-phone.wav
+  973  tar -czf data-num-sounds.tar.gz data/num_* data/*raw-from-phone.wav data/num-test/*.wav
   974  tar -tzf data-num-sounds.tar.gz 
-  975  tar -czf data-animals-sounds.tar.gz data/animals_*
+  975  tar -czf data-animals-sounds.tar.gz data/animals_* data/animals-test/*.wav
   
   977  tar -czf data-num-pkl.tar.gz data/num*.pkl
   978  tar -tzf data-num-pkl.tar.gz 
@@ -68,15 +61,15 @@ These can be downloaded from the Red Cat Labs server.
 
 Sound files (simply recorded on my Android phone using ```Voice Recorder``` in the Android store):
 
-*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-num-sounds.tar.gz">```data-num-sounds.tar.gz```</a>
-*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-animals-sounds.tar.gz">```data-animals-sounds.tar.gz```</a>
+*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-num-sounds.tar.gz">```data-num-sounds.tar.gz```</a> (5.4Mb)
+*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-animals-sounds.tar.gz">```data-animals-sounds.tar.gz```</a> (435Kb)
 
 and the corresponding processed pickle files (for the really lazy):
 
-*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-num-pkl.tar.gz">```data-num-pkl.tar.gz```</a>
-*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-animals-pkl.tar.gz">```data-animals-pkl.tar.gz```</a>
+*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-num-pkl.tar.gz">```data-num-pkl.tar.gz```</a> (430Kb)
+*  <a href="http://redcatlabs.com/downloads/deep-learning-workshop/notebooks/2-CNN/8-Speech/data-animals-pkl.tar.gz">```data-animals-pkl.tar.gz```</a> (50Kb)
 
-These should be unpacked (```tar -xzf XYZ.tar.gz```) in the ```REPO/notebooks/2-CNN/8-Speech/``` directory.
+These should be unpacked (```tar -xzf XYZ.tar.gz```) from with the ```REPO/``` directory itself (the correct paths are embedded).
 
 
 ### Training Process
@@ -113,5 +106,12 @@ that this technique works surprisingly well (i.e. we should be surprised that it
 
 
 
+## Speech Synthesis (coming later)
 
+So far, the ```SpeechSynthesis_Test.ipynb``` isn't in a useable state - 
+but the idea is to make something related to Tacotron, starting with simplifying the 
+output stage.  The current notebook explores whether sounds can be decently reconstructed
+from spectrograms.  Since that seems to work (but by a nasty iterative FFT method), the
+next step is to learn to do the transformation via a network, potentially trained
+adversarially.
 
