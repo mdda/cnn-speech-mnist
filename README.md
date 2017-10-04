@@ -1,5 +1,14 @@
 ## CNNs for Speech Recognition
 
+This set of workbooks illustrates how to use CNNs for speech recognition (in a very basic way).
+
+It includes the preprocessing of speech files into separate words, and then building training and test sets from
+spectrogram 'stamps' for each class.  The recognition phase uses a CNN model derived from a 
+basic MNIST model.
+
+
+### Outline of Operations
+
 The steps for running this example are : 
 
 *  Record some sound files that you want to categories (the idea here being an MNIST-for-speech)

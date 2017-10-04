@@ -8,10 +8,10 @@
 #jupyter notebook --notebook-dir=.
 
 # CPU version
-tensorflow>=1.3.0
+tensorflow>=1.0.0,<1.4.0
 
 # If you're running locally, this needs CUDA toolkit 8.0 and CuDNN v6
-#tensorflow-gpu>=1.3.0
+#tensorflow-gpu>=1.0.0,<1.4.0
 
 # Jupyter (the new new thing)
 jupyter
