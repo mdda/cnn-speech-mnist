@@ -4,7 +4,13 @@ This set of workbooks illustrates how to use CNNs for speech recognition (in a v
 
 It includes the preprocessing of speech files into separate words, and then building training and test sets from
 spectrogram 'stamps' for each class.  The recognition phase uses a CNN model derived from a 
-basic MNIST model.
+basic MNIST model - and shows the 'confusion matrix' as a heat map.
+
+There's pre-baked data for download (although there are only 24 samples of each digit - i.e. 20 to 
+train on - it seems to work pretty well).  And some 'extra words', to demonstrate transfer learning
+using just the speech-MNIST model with an SVM stuck on the end...
+
+Have fun!
 
 
 ### Outline of Operations
